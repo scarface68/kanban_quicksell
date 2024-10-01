@@ -1,10 +1,16 @@
 import React from "react";
 import "./card.css";
 import UserIcon from "../UserIcon";
-import { LuMoreHorizontal } from "react-icons/lu";
 import { getStatusIcon } from "../../utils/helper";
 
 function Card({ ticket, userData, hideStatusIcon, hideProfileIcon }) {
+  const priorityIcon = [
+    "No-priority",
+    "Img - Low Priority",
+    "Img - Medium Priority",
+    "Img - High Priority",
+    "SVG - Urgent Priority grey",
+  ];
   return (
     <div className="card">
       <div className="top-container">
@@ -19,7 +25,11 @@ function Card({ ticket, userData, hideStatusIcon, hideProfileIcon }) {
       </div>
       <div className="bottom-container">
         <div className="more-icon-container">
-          <LuMoreHorizontal color="#797d84" />
+          <img
+            src={`./icons_FEtask/${priorityIcon[ticket.priority]}.svg`}
+            alt="Priority Icon"
+            style={{ width: "16px", height: "16px" }}
+          />
         </div>
         {ticket.tag.map((t) => (
           <div key={t} className="tag-container">

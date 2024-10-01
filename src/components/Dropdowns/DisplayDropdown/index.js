@@ -6,8 +6,6 @@ import React, {
   ChangeEvent,
 } from "react";
 import "./displayDropdown.css";
-import { LuSettings2 } from "react-icons/lu";
-import { BiChevronDown } from "react-icons/bi";
 
 function DisplayDropdown({ grouping, setGrouping, ordering, setOrdering }) {
   const [visible, setVisible] = useState(false);
@@ -37,9 +35,17 @@ function DisplayDropdown({ grouping, setGrouping, ordering, setOrdering }) {
   return (
     <div className="display-dropdown" ref={componentRef}>
       <div className="dropdown-label-container" onClick={openDropdown}>
-        <LuSettings2 color="#6b6f76" />
+          <img
+            src={`./icons_FEtask/Display.svg`}
+            alt="Settings Icon"
+            style={{ width: "18px", height: "18px" }}
+          />
         <div className="dropdown-label">Display</div>
-        <BiChevronDown color="#6b6f76" />
+          <img
+            src={`./icons_FEtask/down.svg`}
+            alt="Down Icon"
+            style={{ width: "18px", height: "18px" }}
+          />
       </div>
       <div className={`dropdown-content-container ${visible && "visible"}`}>
         <div className="dropdown-content-row">

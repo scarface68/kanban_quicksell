@@ -38,7 +38,7 @@
 }
 .card .tag-icon {
     background-color: #bec2c8;
-    border-radius: 9999px;
+    border-radius: 0.5rem;
     height: 0.75rem;
     width: 0.75rem;
 }
@@ -59,8 +59,8 @@
     display: grid;
     place-items: center;
     border: 1px solid #edeff2;
-    border-radius: 0.25rem;
-    padding: 0.25rem 0.5rem;   
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.25rem;   
 }
 
 .card svg {
